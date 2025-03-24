@@ -25,6 +25,10 @@ import Configuration from "@/views/SideBar/Admin/Configuration.vue";
 //-- Admin -> (Users)
 import UserView from "@/views/SideBar/Admin/Users/UserView.vue";
 import NewUser from "@/views/SideBar/Admin/Users/NewUser.vue";
+import IngresoEstudiantesExcel from '@/views/SideBar/CRUD/Estudiantes/IngresoEstudiantesExcel.vue';
+import ListadoEstudiantes from '@/views/SideBar/CRUD/Estudiantes/ListadoEstudiantes.vue';
+import IngresoArea from '@/views/SideBar/CRUD/Horario/IngresoArea.vue';
+
 
 //-- Admin -> (Social Work)
 import SocialWorkCases from "@/views/SideBar/Admin/SocialWork/SocialWorkCases.vue";
@@ -40,6 +44,24 @@ import CaseNotifications from "@/views/SideBar/Cases/CaseNotifications.vue";
 //Reports
 import FeasibilityReport from "@/views/SideBar/Reports/FeasibilityReport.vue";
 import FileReport from "@/views/SideBar/Reports/FileReport.vue";
+
+//Cronogram 
+import Cronograma from '@/views/SideBar/CRUD/Cronograma/Cronograma.vue';
+import IngresoCronograma from '@/views/SideBar/CRUD/Cronograma/IngresoCronograma.vue';
+
+//Periods
+import AsignacionPeriodo from '@/views/SideBar/CRUD/Estudiantes/AsignacionPeriodo.vue';
+import RemoverPeriodo from '@/views/SideBar/CRUD/Estudiantes/RemoverPeriodo.vue';
+
+//Schedule
+import IngresoHorario from '@/views/SideBar/CRUD/Horario/IngresoHorario.vue';
+import VistaHorarios from '@/views/SideBar/CRUD/Horario/VistaHorarios.vue';
+import IngresoHorarioVirtual from '@/views/SideBar/CRUD/Horario/IngresoHorarioVirtual.vue';
+
+// FingerPrint
+import AsignacionHuella from '@/views/SideBar/CRUD/RegistroBiometrico/AsignacionHuella.vue';
+import RegistroHuella from '@/views/SideBar/CRUD/RegistroBiometrico/RegistroHuella.vue';
+import RegistroAsistencia from '@/views/SideBar/CRUD/RegistroBiometrico/RegistroAsistencia.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -126,6 +148,77 @@ const routes: Array<RouteRecordRaw> = [
         path: "TrabajoSocialCasos",
         name: "SocialWorkCases",
         component: SocialWorkCases,
+      },
+      {
+        path: 'Cronograma',
+        name: 'Cronograma',
+        component: Cronograma,
+      },
+      //Tayu
+      {
+        path: 'IngresoCronograma',
+        name: 'IngresoCronograma',
+        component: IngresoCronograma,
+      },
+      {
+        path: 'IngresoCronograma/:id?',
+        name: 'IngresoCronograma',
+        component: IngresoCronograma,
+      },
+      {
+        path: 'IngresoEstudiantesExcel',
+        name: 'IngresoEstudiantesExcel',
+        component: IngresoEstudiantesExcel,
+      },
+      {
+        path: 'ListadoEstudiantes',
+        name: 'ListadoEstudiantes',
+        component: ListadoEstudiantes,
+      },
+      {
+        path: 'AsignacionPeriodo',
+        name: 'AsignacionPeriodo',
+        component: AsignacionPeriodo,
+      },
+      {
+        path: 'RemoverPeriodo',
+        name: 'RemoverPeriodo',
+        component: RemoverPeriodo,
+      },
+      {
+        path: 'IngresoArea',
+        name: 'IngresoArea',
+        component: IngresoArea,
+      },
+      {
+        path: 'IngresoHorario',
+        name: 'IngresoHorario',
+        component: IngresoHorario,
+      },
+      {
+        path: 'IngresoHorarioVirtual',
+        name: 'IngresoHorarioVirtual',
+        component: IngresoHorarioVirtual,
+      },
+      {
+        path: 'VistaHorarios',
+        name: 'VistaHorarios',
+        component: VistaHorarios,
+      },
+      {
+        path: 'AsignacionHuella',
+        name: 'AsignacionHuella',
+        component: AsignacionHuella,
+      },
+      {
+        path: 'RegistroHuella/:id?',
+        name: 'RegistroHuella',
+        component: RegistroHuella,
+      },
+      {
+        path: 'RegistroAsistencia/:id/periodo/:periodo',
+        name: 'RegistroAsistencia',
+        component: RegistroAsistencia,
       },
     ],
   },
