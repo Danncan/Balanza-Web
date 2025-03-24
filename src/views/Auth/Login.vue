@@ -52,6 +52,7 @@ const onFormSubmit = async ({ valid }: { valid: boolean }) => {
     });
 
     // Suponiendo que la API retorna un objeto con datos del usuario o un indicador de éxito.
+    console.log(response.data);
     if (!response.data) {
       toast.add({
         severity: "warn",
